@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package menu;
+import control.Datos;
 
 /**
  *
@@ -27,21 +28,145 @@ public class Menu_secundario extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        nueva_cadena = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
+        validar_boton = new javax.swing.JButton();
+        limpiar_boton = new javax.swing.JButton();
+        validacion = new javax.swing.JLabel();
+        salir_boton = new javax.swing.JButton();
+        regresar_boton = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jPanel1.setBackground(new java.awt.Color(51, 51, 51));
+
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("Ingrese una nueva cadena");
+
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("Válido:");
+
+        validar_boton.setText("Validar");
+        validar_boton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                validar_botonActionPerformed(evt);
+            }
+        });
+
+        limpiar_boton.setText("Limpiar");
+        limpiar_boton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                limpiar_botonActionPerformed(evt);
+            }
+        });
+
+        validacion.setForeground(new java.awt.Color(255, 255, 255));
+
+        salir_boton.setText("Salir");
+        salir_boton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                salir_botonActionPerformed(evt);
+            }
+        });
+
+        regresar_boton.setText("Regresar");
+        regresar_boton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                regresar_botonActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(105, 105, 105)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel2)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(validacion))
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addGroup(jPanel1Layout.createSequentialGroup()
+                                    .addComponent(validar_boton)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(limpiar_boton))
+                                .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(nueva_cadena, javax.swing.GroupLayout.Alignment.LEADING))))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(165, 165, 165)
+                        .addComponent(salir_boton))
+                    .addComponent(regresar_boton))
+                .addContainerGap(107, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addComponent(regresar_boton)
+                .addGap(45, 45, 45)
+                .addComponent(jLabel1)
+                .addGap(18, 18, 18)
+                .addComponent(nueva_cadena, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(validacion))
+                .addGap(39, 39, 39)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(validar_boton)
+                    .addComponent(limpiar_boton))
+                .addGap(18, 18, 18)
+                .addComponent(salir_boton)
+                .addContainerGap(38, Short.MAX_VALUE))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void limpiar_botonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_limpiar_botonActionPerformed
+        // TODO add your handling code here:
+        nueva_cadena.setText("");
+        validacion.setText("");
+    }//GEN-LAST:event_limpiar_botonActionPerformed
+
+    private void validar_botonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_validar_botonActionPerformed
+        // TODO add your handling code here:
+        validacion.setText("");
+        Datos.memoria.getAlfabeto().forEach((i) -> {
+            System.out.println(i);
+        });
+        System.out.println(Datos.memoria.getNombre());
+    }//GEN-LAST:event_validar_botonActionPerformed
+
+    private void salir_botonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salir_botonActionPerformed
+        // TODO add your handling code here:
+        System.exit(0);
+    }//GEN-LAST:event_salir_botonActionPerformed
+
+    private void regresar_botonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_regresar_botonActionPerformed
+        // TODO add your handling code here:
+        Menu_principal ventana = new Menu_principal();
+        dispose();
+        ventana.setVisible(true);
+      
+    }//GEN-LAST:event_regresar_botonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -79,5 +204,14 @@ public class Menu_secundario extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JButton limpiar_boton;
+    private javax.swing.JTextField nueva_cadena;
+    private javax.swing.JButton regresar_boton;
+    private javax.swing.JButton salir_boton;
+    private javax.swing.JLabel validacion;
+    private javax.swing.JButton validar_boton;
     // End of variables declaration//GEN-END:variables
 }
