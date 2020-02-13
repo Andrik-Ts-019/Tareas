@@ -5,6 +5,7 @@
  */
 package menu;
 import control.Datos;
+import control.Funciones;
 
 /**
  *
@@ -151,9 +152,7 @@ public class Menu_secundario extends javax.swing.JFrame {
     private void validar_botonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_validar_botonActionPerformed
         // TODO add your handling code here:
         validacion.setText("");
-        Datos.memoria.getAlfabeto().forEach((i) -> {
-            System.out.println(i);
-        });
+        System.out.println("Alfabeto: " + Datos.memoria.getAlfabeto().toString());
     }//GEN-LAST:event_validar_botonActionPerformed
 
     private void salir_botonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salir_botonActionPerformed
@@ -163,6 +162,7 @@ public class Menu_secundario extends javax.swing.JFrame {
 
     private void regresar_botonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_regresar_botonActionPerformed
         // TODO add your handling code here:
+        Funciones.control.resetData();
         Menu_principal ventana = new Menu_principal();
         dispose();
         ventana.setVisible(true);

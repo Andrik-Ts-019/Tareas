@@ -156,12 +156,11 @@ public class Menu_principal extends javax.swing.JFrame {
 
     private void aceptar_botonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aceptar_botonActionPerformed
         // TODO add your handling code here:
-        Funciones y = new Funciones();
         Datos.memoria.setNombre(nombre_campo.getText().toLowerCase());
         Datos.memoria.setMatricula(matricula_campo.getText());
-        if(y.number()){
-            y.alfabeto();
-            y.sortAlfabeto();
+        if(Funciones.control.number()){
+            Funciones.control.alfabeto();
+            Funciones.control.sortAlfabeto();
             dispose();
             Menu_secundario ventana = new Menu_secundario();
             ventana.setVisible(true);

@@ -10,6 +10,12 @@ package control;
  * @author salvador
  */
 public class Funciones {
+    private Funciones(){
+        
+    }
+    
+    public static Funciones control = new Funciones();
+    
     public void alfabeto(){
         boolean equals = false;
         
@@ -79,5 +85,11 @@ public class Funciones {
                 }
             }
         }
+    }
+    
+    public void resetData(){
+        Datos.memoria.getAlfabeto().clear();
+        Datos.memoria.setNombre("");
+        Datos.memoria.setMatricula("");
     }
 }
