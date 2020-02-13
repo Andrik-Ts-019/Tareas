@@ -22,7 +22,7 @@ public class Datos {
     //Variables
     private String nombre = new String();
     private String matricula = new String();
-    private ArrayList<Character> alfabeto = new ArrayList<Character>();
+    private static ArrayList<Character> alfabeto = new ArrayList<Character>();
     
     //Metodos
     public void setNombre(String nombre){
@@ -43,10 +43,6 @@ public class Datos {
     
     public void addElement(char elemento){
         this.alfabeto.add(elemento);
-    }
-    
-    public void sortAlfabeto(){
-        
     }
     
     public ArrayList<Character> getAlfabeto(){

@@ -15,6 +15,7 @@ public class Funciones {
         
         char[] matricula = Datos.memoria.getMatricula().toCharArray();
         for(char x: matricula){
+            equals = false;
             for(char y: Datos.memoria.getAlfabeto()){
                 if(x == y){
                     equals = true;
@@ -30,6 +31,7 @@ public class Funciones {
         
         char[] nombre = Datos.memoria.getNombre().toCharArray();
         for(char x: nombre){
+            equals = false;
             for(char y: Datos.memoria.getAlfabeto()){
                 if(x == y){
                     equals = true;
@@ -42,8 +44,8 @@ public class Funciones {
         }
     }
     
-    public boolean minus(char[] nombre){
-        for(char x: nombre){
+    public boolean minus(){
+        for(char x: Datos.memoria.getNombre().toCharArray()){
             if(x >= 97 && x <=122){
                 
             }
@@ -54,8 +56,8 @@ public class Funciones {
         return true;
     }
     
-    public boolean number(char[] matricula){
-        for(char x: matricula){
+    public boolean number(){
+        for(char x: Datos.memoria.getMatricula().toCharArray()){
             if(x >= 48 && x <= 57){
                 
             }
@@ -64,5 +66,18 @@ public class Funciones {
             }
         }
         return true;
+    }
+    
+    public void sortAlfabeto(){
+        char aux;
+        for(int i = 0; i < Datos.memoria.getAlfabeto().size() - 1; i++){
+            for(int j = i + 1; j < Datos.memoria.getAlfabeto().size(); j++){
+                if(Datos.memoria.getAlfabeto().get(i) > Datos.memoria.getAlfabeto().get(j)){
+                    aux = Datos.memoria.getAlfabeto().get(i);
+                    Datos.memoria.getAlfabeto().set(i, Datos.memoria.getAlfabeto().get(j));
+                    Datos.memoria.getAlfabeto().set(j, aux);
+                }
+            }
+        }
     }
 }
