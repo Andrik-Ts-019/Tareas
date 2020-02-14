@@ -54,6 +54,7 @@ public class Funciones {
                 Datos.memoria.addElement(x);
             }
         }
+        Datos.memoria.addElement('.');
     }
     
     public boolean minus(){

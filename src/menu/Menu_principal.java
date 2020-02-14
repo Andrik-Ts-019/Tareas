@@ -158,7 +158,7 @@ public class Menu_principal extends javax.swing.JFrame {
         // TODO add your handling code here:
         Datos.memoria.setNombre(nombre_campo.getText().toLowerCase());
         Datos.memoria.setMatricula(matricula_campo.getText());
-        if(Funciones.control.number()){
+        if(Funciones.control.number() && !nombre_campo.getText().isEmpty() && !matricula_campo.getText().isEmpty()){
             Funciones.control.alfabeto();
             Funciones.control.sortAlfabeto();
             dispose();

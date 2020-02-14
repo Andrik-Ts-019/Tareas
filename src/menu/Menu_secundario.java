@@ -4,8 +4,9 @@
  * and open the template in the editor.
  */
 package menu;
-import control.Datos;
 import control.Funciones;
+import control.Automata;
+
 
 /**
  *
@@ -151,7 +152,13 @@ public class Menu_secundario extends javax.swing.JFrame {
 
     private void validar_botonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_validar_botonActionPerformed
         // TODO add your handling code here:
-        validacion.setText("Valido | No valido");
+        Automata nuevo = new Automata(nueva_cadena.getText());
+        if(nuevo.validacion()){
+            validacion.setText("Valido");
+        }
+        else{
+            validacion.setText("No valido");
+        }
     }//GEN-LAST:event_validar_botonActionPerformed
 
     private void salir_botonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salir_botonActionPerformed
