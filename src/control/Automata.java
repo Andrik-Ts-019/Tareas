@@ -12,13 +12,14 @@ package control;
 public class Automata {
     String cadena;
     String endOf = "." + Datos.memoria.getMatricula();
+    String initials = "";
     
     public Automata(String cadena){
         this.cadena = cadena;
     }
     
-    public boolean validacion(){        
-        return startsWithSymbol() && insideAlfabeto() && endsWithMatricula() && dotsContinous();
+    public boolean validacion(){
+        return startsWithSymbol() && insideAlfabeto() && endsWithMatricula() && dotsContinous() && initials();
     }
     
     private boolean startsWithSymbol(){
@@ -49,5 +50,18 @@ public class Automata {
             return false;
         }
         return true;
+    }
+    
+    private boolean initials(){
+        String[] array = Datos.memoria.getNombre().split(" ");
+        for(String x: array){
+            this.initials = this.initials + x.toCharArray()[0];
+        }
+        
+        System.out.println("Initials: " + this.initials);
+        if(this.cadena.contains(this.initials)){
+            return true;
+        }
+        return false;
     }
 }
