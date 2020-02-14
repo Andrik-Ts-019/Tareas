@@ -11,13 +11,14 @@ package control;
  */
 public class Automata {
     String cadena;
+    String endOf = "." + Datos.memoria.getMatricula();
     
     public Automata(String cadena){
         this.cadena = cadena;
     }
     
     public boolean validacion(){        
-        return startsWithSymbol() && insideAlfabeto();
+        return startsWithSymbol() && insideAlfabeto() && endsWithMatricula() && dotsContinous();
     }
     
     private boolean startsWithSymbol(){
@@ -32,6 +33,20 @@ public class Automata {
             if(!Datos.memoria.getAlfabeto().contains(x)){
                 return false;
             }
+        }
+        return true;
+    }
+    
+    private boolean endsWithMatricula(){
+        if(this.cadena.endsWith(this.endOf)){
+            return true;
+        }
+        return false;
+    }
+    
+    private boolean dotsContinous(){
+        if(this.cadena.contains("..")){
+            return false;
         }
         return true;
     }
