@@ -16,17 +16,23 @@ public class Automata {
         this.cadena = cadena;
     }
     
-    public boolean validacion(){
-        boolean startsWithSymbol = false;
-        
-        boolean insideAlfabeto = true;
-        for(char x: cadena.toCharArray()){
+    public boolean validacion(){        
+        return startsWithSymbol() && insideAlfabeto();
+    }
+    
+    private boolean startsWithSymbol(){
+        if(this.cadena.toCharArray()[0] >= 48 && this.cadena.toCharArray()[0] <= 57){
+            return true;
+        }
+        return false;
+    }
+    
+    private boolean insideAlfabeto(){
+        for(char x: this.cadena.toCharArray()){
             if(!Datos.memoria.getAlfabeto().contains(x)){
-                insideAlfabeto = false;
-                break;
+                return false;
             }
         }
-        
-        return insideAlfabeto;
+        return true;
     }
 }
