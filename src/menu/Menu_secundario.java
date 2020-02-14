@@ -151,8 +151,7 @@ public class Menu_secundario extends javax.swing.JFrame {
 
     private void validar_botonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_validar_botonActionPerformed
         // TODO add your handling code here:
-        validacion.setText("");
-        System.out.println("Alfabeto: " + Datos.memoria.getAlfabeto().toString());
+        validacion.setText("Valido | No valido");
     }//GEN-LAST:event_validar_botonActionPerformed
 
     private void salir_botonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salir_botonActionPerformed

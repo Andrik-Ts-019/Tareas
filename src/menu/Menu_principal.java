@@ -169,7 +169,7 @@ public class Menu_principal extends javax.swing.JFrame {
             Error e = new Error();
             e.setVisible(true);
         }
-        
+        System.out.println("Alfabeto: " + Datos.memoria.getAlfabeto().toString());
     }//GEN-LAST:event_aceptar_botonActionPerformed
 
     private void limpiar_botonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_limpiar_botonActionPerformed

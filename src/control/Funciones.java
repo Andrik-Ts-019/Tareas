@@ -21,6 +21,9 @@ public class Funciones {
         
         char[] matricula = Datos.memoria.getMatricula().toCharArray();
         for(char x: matricula){
+            if(x == ' '){
+                continue;
+            }
             equals = false;
             for(char y: Datos.memoria.getAlfabeto()){
                 if(x == y){
@@ -37,6 +40,9 @@ public class Funciones {
         
         char[] nombre = Datos.memoria.getNombre().toCharArray();
         for(char x: nombre){
+            if(x == ' '){
+                continue;
+            }
             equals = false;
             for(char y: Datos.memoria.getAlfabeto()){
                 if(x == y){
