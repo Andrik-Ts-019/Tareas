@@ -41,6 +41,7 @@ public class Menu_secundario extends javax.swing.JFrame {
         regresar_boton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(51, 51, 51));
 
@@ -154,8 +155,7 @@ public class Menu_secundario extends javax.swing.JFrame {
 
     private void validar_botonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_validar_botonActionPerformed
         // TODO add your handling code here:
-        Automata nuevo = new Automata(nueva_cadena.getText());
-        if(nuevo.validacion()){
+        if(Automata.automata.validacion(nueva_cadena.getText())){
             validacion.setText("Cadena válida");
         }
         else{

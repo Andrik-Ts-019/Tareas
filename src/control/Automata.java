@@ -14,11 +14,13 @@ public class Automata {
     String endOf = "." + Datos.memoria.getMatricula();
     String initials = "";
     
-    public Automata(String cadena){
-        this.cadena = cadena;
+    private Automata(){
     }
     
-    public boolean validacion(){
+    public static Automata automata = new Automata();
+    
+    public boolean validacion(String cadena){
+        this.cadena = cadena;
         return startsWithSymbol() && insideAlfabeto() && endsWithMatricula() && dotsContinous() && initials();
     }
     
@@ -52,13 +54,16 @@ public class Automata {
         return true;
     }
     
-    private boolean initials(){
+    public void getInitials(){
+        this.initials = "";
         String[] array = Datos.memoria.getNombre().split(" ");
         for(String x: array){
             this.initials = this.initials + x.toCharArray()[0];
         }
-        
         System.out.println("Initials: " + this.initials);
+    }
+    
+    private boolean initials(){   
         if(this.cadena.contains(this.initials)){
             return true;
         }

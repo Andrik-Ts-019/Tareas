@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package menu;
+import control.Automata;
 import control.Datos;
 import control.Funciones;
 
@@ -40,6 +41,9 @@ public class Menu_principal extends javax.swing.JFrame {
         error = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(500, 500));
+        setName("Automata"); // NOI18N
+        setResizable(false);
 
         jPanel2.setBackground(new java.awt.Color(51, 51, 51));
 
@@ -170,6 +174,7 @@ public class Menu_principal extends javax.swing.JFrame {
             e.setVisible(true);
         }
         System.out.println("Alfabeto: " + Datos.memoria.getAlfabeto().toString());
+        Automata.automata.getInitials();
     }//GEN-LAST:event_aceptar_botonActionPerformed
 
     private void limpiar_botonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_limpiar_botonActionPerformed
