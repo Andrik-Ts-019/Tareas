@@ -44,6 +44,7 @@ public class Menu_secundario extends javax.swing.JFrame {
         matricula_label = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Validación");
         setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(51, 51, 51));
