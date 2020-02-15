@@ -10,9 +10,9 @@ package control;
  * @author salvador
  */
 public class Automata {
-    String cadena;
-    String endOf = "." + Datos.memoria.getMatricula();
-    String initials = "";
+    private String cadena;
+    private String endOf = "." + Datos.memoria.getMatricula();
+    private String initials = "";
     
     private Automata(){
     }
@@ -54,13 +54,13 @@ public class Automata {
         return true;
     }
     
-    public void getInitials(){
+    public String getInitials(){
         this.initials = "";
         String[] array = Datos.memoria.getNombre().split(" ");
         for(String x: array){
             this.initials = this.initials + x.toCharArray()[0];
         }
-        System.out.println("Initials: " + this.initials);
+        return this.initials;
     }
     
     private boolean initials(){   
